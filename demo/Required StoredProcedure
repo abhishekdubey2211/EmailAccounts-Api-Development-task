@@ -1,0 +1,24 @@
+********************************************Required StoredProcedure***********************************************
+DELIMITER //
+CREATE PROCEDURE InsertAndGetEmailAccount(
+    IN emailid VARCHAR(255),
+    IN username VARCHAR(255),
+    IN password VARCHAR(255),
+    IN contactno VARCHAR(20),
+    IN active INT
+)
+BEGIN
+    -- Declare a variable to store the last inserted ID
+    DECLARE last_inserted_id INT;
+
+    -- Insert data into the email_accounts table
+    INSERT INTO email_accounts (emailid, username, password, contactno, isdelete, active)
+    VALUES (emailid, username, password, contactno, 0, active);
+
+    -- Get the last inserted ID
+    SET last_inserted_id = LAST_INSERT_ID();
+
+    -- Select the data with the last inserted ID
+    SELECT * FROM email_accounts WHERE uniqueid = last_inserted_id;
+END //
+DELIMITER ;
