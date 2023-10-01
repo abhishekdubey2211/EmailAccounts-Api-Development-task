@@ -1,0 +1,5 @@
+com\emailAccounts\constants\MessageConstants.class
+com\emailAccounts\model\EmailAccounts.class
+com\emailAccounts\model\EmailAccountsApiResponse.class
+com\emailAccounts\actions\EmailAccountsAction.class
+com\emailAccounts\DemoApplication.class

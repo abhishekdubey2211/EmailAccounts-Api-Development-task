@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "3ae0e031-9c7a-45f6-bf4e-3a7b316e3064",
+		"name": "EmailAccounts_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28031818",
+		"_collection_link": "https://gold-astronaut-706993.postman.co/workspace/My-Workspace~6d25a4b9-1438-450b-811b-58f1a81711fd/collection/28031818-3ae0e031-9c7a-45f6-bf4e-3a7b316e3064?action=share&source=collection_link&creator=28031818"
+	},
+	"item": [
+		{
+			"name": "AddEmailAccountsApi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailid\":\"abhi@gmail.com\",\r\n    \"username\":\"hnnh\",\r\n    \"password\":\"abhi1234\",\r\n    \"contactno\":\"5656677738\",\r\n    \"active\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/emailAccounts/emailaccount",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"emailAccounts",
+						"emailaccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmailAccountsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/emailAccounts/47",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"emailAccounts",
+						"47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllEmailAccounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/emailAccounts/get_emailaccounts",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"emailAccounts",
+						"get_emailaccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditEmailAccounts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uniqueid\":12,\r\n    \"emailid\":\"abhi@gmail.com\",\r\n    \"username\":\"aahh\",\r\n    \"password\":\"jnnj\",\r\n    \"contactno\":\"9820774571\",\r\n    \"active\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/emailAccounts/emailaccount",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"emailAccounts",
+						"emailaccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmailAccounts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uniqueid\":47\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/emailAccounts/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"emailAccounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/emailAccounts/version",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"emailAccounts",
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetriveTheDeletedEmailById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uniqueid\":47\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/emailAccounts/retrive",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"emailAccounts",
+						"retrive"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "{{BaseURL}}",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:8090"
+		}
+	]
+}
